@@ -156,7 +156,7 @@ document.write("<a class='entryTitle' href='mailto:"+link+"'>Brian Beloat</a>")
 }
 //-->
 </script><noscript>Sorry, you need Javascript on to email me.</noscript></b><br />
-            Website Code <a class="entryTitle" href="http://code.google.com/p/im2405-beloat-test/">Available Here</a><br />
+            Website Code <a class="entryTitle" href="https://code.google.com/p/bbeloat-portfolio-site/">Available Here</a><br />
         </center>
   <!-- end .footer --></div>
 </div><!-- end .container -->
