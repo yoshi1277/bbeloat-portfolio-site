@@ -92,9 +92,38 @@ include 'dataconnect.php';
 				{
 					$usermatch = true;
 				}
+				
+				if ($row[username] = "")
+				{
+					$blankfield = true;
+				}
+				elseif ($row[userFirstName] = "")
+				{
+					$blankfield = true;
+				}
+				elseif ($row[userEmail] = "")
+				{
+					$blankfield = true;
+				}
+				elseif ($row[userPhone] = "")
+				{
+					$blankfield = true;
+				}
+				elseif ($row[userPW] = "")
+				{
+					$blankfield = true;
+				}
+				elseif ($row[userPW2] = "")
+				{
+					$blankfield = true;
+				}
+				else
+				{
+					$blankfield = false;
+				}	
 			}
 			
-			if(($userPW == $userPW2)&&($usermatch == false))
+			if(($userPW == $userPW2)&&($usermatch == false)&&($blankfield == false))
 			{
 			$sql = "INSERT INTO User(userName,userFirstName,userEmail,userPhone,userPW,userPassword,userType) VALUES ('$userName','$userFirstName','$userEmail','$userPhone','$userPW','$userPassword',2)";
 			
@@ -118,6 +147,12 @@ include 'dataconnect.php';
 			{
 				echo "<br>";
 				echo "That username is already taken!";
+				echo "<br /><br />".'<a class="jobTitle" href="register.php">'."Try Again</a><br /><br />";
+			}
+			elseif ($blankfield == true)
+			{
+				echo "<br>";
+				echo "Fields cannot be blank! Try again!";
 				echo "<br /><br />".'<a class="jobTitle" href="register.php">'."Try Again</a><br /><br />";
 			}
 			else
