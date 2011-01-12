@@ -93,34 +93,24 @@ include 'dataconnect.php';
 					$usermatch = true;
 				}
 				
-				if ($row[username] = "")
+				$blankfield = false;
+				
+				if ($row[username] = ' ')
 				{
 					$blankfield = true;
 				}
-				elseif ($row[userFirstName] = "")
+				elseif ($row[userFirstName] = ' ')
 				{
 					$blankfield = true;
 				}
-				elseif ($row[userEmail] = "")
+				elseif ($row[userEmail] = ' ')
 				{
 					$blankfield = true;
 				}
-				elseif ($row[userPhone] = "")
+				elseif ($row[userPhone] = ' ')
 				{
 					$blankfield = true;
 				}
-				elseif ($row[userPW] = "")
-				{
-					$blankfield = true;
-				}
-				elseif ($row[userPW2] = "")
-				{
-					$blankfield = true;
-				}
-				else
-				{
-					$blankfield = false;
-				}	
 			}
 			
 			if(($userPW == $userPW2)&&($usermatch == false)&&($blankfield == false))
