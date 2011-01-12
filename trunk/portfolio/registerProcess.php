@@ -67,9 +67,8 @@ include 'dataconnect.php';
 			$userFirstName = mysql_real_escape_string($_POST['userFirstName']);
 			$userEmail = mysql_real_escape_string($_POST['userEmail']);
 			$userPhone = mysql_real_escape_string($_POST['userPhone']);
-			$userPW = mysql_real_escape_string($_POST['userPW']);
-			$userPW2 = mysql_real_escape_string($_POST['userPW2']);
-			$userPassword = md5($userPW);
+			$userPW = md5(mysql_real_escape_string($_POST['userPW']));
+			$userPW2 = md5(mysql_real_escape_string($_POST['userPW2']));
 			
 			$query = "SELECT * FROM User";
 			$result = mysql_query($query);
@@ -115,7 +114,7 @@ include 'dataconnect.php';
 			
 			if(($userPW == $userPW2)&&($usermatch == false)&&($blankfield == false))
 			{
-			$sql = "INSERT INTO User(userName,userFirstName,userEmail,userPhone,userPassword,userType) VALUES ('$userName','$userFirstName','$userEmail','$userPhone','$userPassword',2)";
+			$sql = "INSERT INTO User(userName,userFirstName,userEmail,userPhone,userPassword,userType) VALUES ('$userName','$userFirstName','$userEmail','$userPhone','$userPW',2)";
 			
 			$result = mysql_query($sql,$link);
 
