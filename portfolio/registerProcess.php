@@ -125,7 +125,7 @@ include 'dataconnect.php';
 			
 			if(($userPW == $userPW2)&&($usermatch == false)&&($blankfield == false))
 			{
-			$sql = "INSERT INTO User(userName,userFirstName,userEmail,userPhone,userPW,userPassword,userType) VALUES ('$userName','$userFirstName','$userEmail','$userPhone','$userPW','$userPassword',2)";
+			$sql = "INSERT INTO User(userName,userFirstName,userEmail,userPhone,userPassword,userType) VALUES ('$userName','$userFirstName','$userEmail','$userPhone','$userPassword',2)";
 			
 			$result = mysql_query($sql,$link);
 
