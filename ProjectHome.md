@@ -1,0 +1,1 @@
+Portfolio and Project Status Website design using PHP, HTML and MySQL. Created as a final project for IM2405 Intermediate Scripting Languages.
